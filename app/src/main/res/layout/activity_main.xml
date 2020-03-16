@@ -10,7 +10,7 @@
         android:id="@+id/imageView"
         android:layout_width="171dp"
         android:layout_height="129dp"
-        app:layout_constraintBottom_toTopOf="@+id/autoCompleteTextView"
+        app:layout_constraintBottom_toTopOf="@+id/select_city_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,21 +19,33 @@
         app:srcCompat="@drawable/cloud" />
 
     <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextView"
+        android:id="@+id/select_city_text_view"
         android:layout_width="300dp"
         android:layout_height="43dp"
         android:gravity="center"
-        android:text="AutoCompleteTextView"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/city_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/select_city_text_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="105dp"
         android:layout_height="90dp"
-        app:layout_constraintBottom_toTopOf="@+id/autoCompleteTextView"
+        app:layout_constraintBottom_toTopOf="@+id/select_city_text_view"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.319"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +57,7 @@
         android:id="@+id/imageView3"
         android:layout_width="121dp"
         android:layout_height="129dp"
-        app:layout_constraintBottom_toTopOf="@+id/autoCompleteTextView"
+        app:layout_constraintBottom_toTopOf="@+id/select_city_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.42"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,12 +66,15 @@
         app:srcCompat="@drawable/raily_cloud" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/city_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select_city_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_city_text_view"
+        app:layout_constraintVertical_bias="0.871" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Weather_App</string>
-    <string name="map_box_token">sg</string>
+    <string name="map_box_token">pk.eyJ1IjoiYW1pcm1vc2lvIiwiYSI6ImNrN3Q2anc3aTBtcTkzZW4xY2kzZ2FhMmkifQ.SxsuHlSQf51n34IYDcT3ag</string>
     <string name="select_city_bottom">ok</string>
 </resources>
