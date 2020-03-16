@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Weather_App</string>
+    <string name="map_box_token">sg</string>
 </resources>
