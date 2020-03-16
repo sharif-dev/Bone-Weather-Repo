@@ -3,6 +3,7 @@ package com.example.weather_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         pb = findViewById(R.id.city_progress);
 
         autoCompleteTextView = findViewById(R.id.select_city_text_view);
+        autoCompleteTextView.setDropDownBackgroundDrawable(getResources().getDrawable(R.color.autoCompleteDropDown));
         autoCompleteTextView.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -70,11 +72,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void LoadCities(Context context) {
-        Log.d("Load:", String.valueOf(cities.length));
-        ArrayAdapter<City> listAdapter = new ArrayAdapter<City>(context, android.R.layout.activity_list_item, cities);
+        ArrayAdapter<City> listAdapter = new ArrayAdapter<City>(context, R.layout.city_adapter, cities);
         MainActivity.autoCompleteTextView.setAdapter(listAdapter);
+        MainActivity.autoCompleteTextView.showDropDown();
         MainActivity.pb.setVisibility(View.INVISIBLE);
-
+        Log.d("Load:", String.valueOf(cities.length));
     }
 
 }

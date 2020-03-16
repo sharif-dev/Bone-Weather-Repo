@@ -18,16 +18,22 @@
         app:layout_constraintVertical_bias="0.283"
         app:srcCompat="@drawable/cloud" />
 
+
     <AutoCompleteTextView
         android:id="@+id/select_city_text_view"
-        android:layout_width="300dp"
-        android:layout_height="43dp"
+        android:layout_width="270dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/autoComplete"
+        android:dropDownSelector="@color/autoComplete"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintEnd_toStartOf="@id/city_progress"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44"
+        android:foregroundGravity="left"/>
 
     <ProgressBar
         android:id="@+id/city_progress"
@@ -35,11 +41,13 @@
         android:layout_height="wrap_content"
         android:indeterminate="true"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/select_city_text_view"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.388"
         app:layout_constraintStart_toEndOf="@+id/select_city_text_view"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="@+id/select_city_text_view"
+        app:layout_constraintVertical_bias="0.189"
+        android:textDirection="ltr"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -69,12 +77,13 @@
         android:id="@+id/city_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:text="@string/select_city_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/select_city_text_view"
-        app:layout_constraintVertical_bias="0.871" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
