@@ -30,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
     public static Button b;
     public static ProgressBar pb;
     public static AutoCompleteTextView autoCompleteTextView;
+    public static String NAME_OF_CITY = "NAME_OF_CITY_INTENT";
+    public static String LATITUDE = "LATITUDE_INTENT";
+    public static String LONGITUDE = "LONGITUDE_INTENT";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
