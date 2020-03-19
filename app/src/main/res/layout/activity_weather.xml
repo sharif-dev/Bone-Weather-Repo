@@ -1,9 +1,421 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.weather_app.WeatherActivity">
+    android:background="#90D8E1"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/title_weather_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:id="@+id/saturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Saturday"
+            android:textAlignment="center"
+            tools:text="Saturday" />
+
+        <ImageView
+            android:id="@+id/saturdayIcon"
+            android:layout_marginEnd="40dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sun" />
+
+
+        <TextView
+            android:id="@+id/saturdayTopTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/saturdayTopIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/top_temperature_foreground" />
+
+        <TextView
+            android:id="@+id/saturdayMinTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/saturdayMinIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/min_temperature_foreground" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:id="@+id/sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sunday"
+            android:textAlignment="center"
+            tools:text="Sunday" />
+
+        <ImageView
+            android:id="@+id/sundayIcon"
+            android:layout_marginEnd="40dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sun" />
+
+
+        <TextView
+            android:id="@+id/sundayTopTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/sundayTopIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/top_temperature_foreground" />
+
+        <TextView
+            android:id="@+id/sundayMinTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/sundayMinIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/min_temperature_foreground" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:id="@+id/monday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Monday"
+            android:textAlignment="center"
+            tools:text="Monday" />
+
+        <ImageView
+            android:id="@+id/mondayIcon"
+            android:layout_marginEnd="40dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sun" />
+
+
+        <TextView
+            android:id="@+id/mondayTopTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/mondayTopIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/top_temperature_foreground" />
+
+        <TextView
+            android:id="@+id/mondayMinTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/mondayMinIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/min_temperature_foreground" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:id="@+id/tuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tuesday"
+            android:textAlignment="center"
+            tools:text="Tuesday" />
+
+        <ImageView
+            android:id="@+id/tuesdayIcon"
+            android:layout_marginEnd="40dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sun" />
+
+
+        <TextView
+            android:id="@+id/tuesdayTopTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/tuesdayTopIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/top_temperature_foreground" />
+
+        <TextView
+            android:id="@+id/tuesdayMinTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/tuesdayMinIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/min_temperature_foreground" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:id="@+id/wednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Wednesday"
+            android:textAlignment="center"
+            tools:text="Wednesday" />
+
+        <ImageView
+            android:id="@+id/wednesdayIcon"
+            android:layout_marginEnd="40dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sun" />
+
+
+        <TextView
+            android:id="@+id/wednesdayTopTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/wednesdayTopIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/top_temperature_foreground" />
+
+        <TextView
+            android:id="@+id/wednesdayMinTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/wednesdayMinIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/min_temperature_foreground" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:id="@+id/thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Thursday"
+            android:textAlignment="center"
+            tools:text="Thursday" />
+
+        <ImageView
+            android:id="@+id/thursdayIcon"
+            android:layout_marginEnd="40dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sun" />
+
+
+        <TextView
+            android:id="@+id/thursdayTopTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/thursdayTopIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/top_temperature_foreground" />
+
+        <TextView
+            android:id="@+id/thursdayMinTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/thursdayMinIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/min_temperature_foreground" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:id="@+id/friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Friday"
+            android:textAlignment="center"
+            tools:text="Friday" />
+
+        <ImageView
+            android:id="@+id/fridayIcon"
+            android:layout_marginEnd="40dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sun" />
+
+
+        <TextView
+            android:id="@+id/fridayTopTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/fridayTopIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/top_temperature_foreground" />
+
+        <TextView
+            android:id="@+id/fridayMinTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="center"
+            tools:text="hello wrold" />
+
+        <ImageView
+            android:id="@+id/fridayMinIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/min_temperature_foreground" />
+    </LinearLayout>
+
+
+</LinearLayout>
