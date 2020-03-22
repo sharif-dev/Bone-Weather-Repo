@@ -39,6 +39,7 @@ public class MapBoxSRV {
                                 String x = jsonCity.getJSONArray("center").get(0).toString();
                                 String y = jsonCity.getJSONArray("center").get(1).toString();
                                 Pair<String, String> center = new Pair<>(x, y);
+                                c.setCenter(center);
                                 cities[index] = c;
                             }
                             MainActivity.cities = cities;

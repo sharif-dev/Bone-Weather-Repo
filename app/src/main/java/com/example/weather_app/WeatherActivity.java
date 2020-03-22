@@ -53,6 +53,11 @@ public class WeatherActivity extends AppCompatActivity {
         nameOfCity = "Tehran";
         latitude = "35.689198";
         longitude = "51.388973";
+
+        nameOfCity = intent.getExtras().getString("nameOfCity");
+        latitude = intent.getExtras().getString("latitude");
+        longitude = intent.getExtras().getString("longitude");
+
 //        WorkerThread a = new WorkerThread();
 //        a.handler = handler;
 //        a.run();

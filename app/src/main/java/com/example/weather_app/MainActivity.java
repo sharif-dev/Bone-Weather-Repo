@@ -3,6 +3,7 @@ package com.example.weather_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,6 +11,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -43,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        b = findViewById(R.id.city_button);
         pb = findViewById(R.id.city_progress);
 
         autoCompleteTextView = findViewById(R.id.select_city_text_view);
@@ -71,6 +72,22 @@ public class MainActivity extends AppCompatActivity {
                     }
                 };
                 handler.postDelayed(runnable, 200);
+            }
+        });
+
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d("hellhlhlhlhlhl","shit");
+                Object item = parent.getItemAtPosition(position);
+                if (item instanceof City) {
+                    City city = (City) item;
+                    Intent intent = new Intent(getBaseContext(), WeatherActivity.class);
+                    intent.putExtra("nameOfCity", city.getName());
+                    intent.putExtra("longitude", city.getCenter().first);
+                    intent.putExtra("latitude", city.getCenter().second);
+                    startActivity(intent);
+                }
             }
         });
     }
