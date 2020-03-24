@@ -5,16 +5,12 @@ import android.os.Message;
 import android.util.Log;
 
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.example.weather_app.MainActivity;
-import com.example.weather_app.R;
 import com.example.weather_app.WeatherActivity;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 
@@ -81,10 +77,12 @@ public class DarkSky implements Runnable {
                             message = new Message();
                             message.what = WeatherActivity.SUCCESS_GET_WEATHER;
                             message.obj = response.get(DarkSky.DAILY_TYPE);
-                            handler.sendMessage(message);
+                            handler.sendMessageDelayed(message, 500);
                             Log.d("VOLLEY", "onResponse: OK");
                         } catch (Exception e) {
-                            result = null;
+                            message = new Message();
+                            message.what = WeatherActivity.FAIL_GET_WEATHER;
+                            handler.sendMessageDelayed(message, 500);
                             e.printStackTrace();
                             Log.d("VOLLEY", "onResponse: SHIT");
                         }

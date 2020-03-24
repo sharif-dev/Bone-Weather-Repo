@@ -83,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
                 if (item instanceof City) {
                     City city = (City) item;
                     Intent intent = new Intent(getBaseContext(), WeatherActivity.class);
-                    intent.putExtra("nameOfCity", city.getName());
-                    intent.putExtra("longitude", city.getCenter().first);
-                    intent.putExtra("latitude", city.getCenter().second);
+                    intent.putExtra(MainActivity.NAME_OF_CITY, city.getName());
+                    intent.putExtra(MainActivity.LONGITUDE, city.getCenter().first);
+                    intent.putExtra(MainActivity.LATITUDE, city.getCenter().second);
                     startActivity(intent);
                 }
             }
