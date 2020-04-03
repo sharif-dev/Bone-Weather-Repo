@@ -53,7 +53,7 @@ public class MapBoxSRV {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.d("fffff", "onErrorResponse: ");
+                        MainActivity.ShowError(context);
                     }
                 });
         MainActivity.requestQueue.add(getRequest);
